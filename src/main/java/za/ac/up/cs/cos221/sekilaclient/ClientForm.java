@@ -72,6 +72,7 @@ public class ClientForm extends javax.swing.JFrame {
                 scpFilms = new javax.swing.JScrollPane();
                 tblFilms = new javax.swing.JTable();
                 btnAddFilm1 = new javax.swing.JButton();
+                jLabel11 = new javax.swing.JLabel();
                 pnlInventory = new javax.swing.JPanel();
                 scpInventory = new javax.swing.JScrollPane();
                 tblInventory = new javax.swing.JTable();
@@ -367,17 +368,20 @@ public class ClientForm extends javax.swing.JFrame {
                         }
                 });
 
+                jLabel11.setText("<html><b>Hint:</b><br />Click the column<br />titles to sort by<br />individual columns. </html>");
+
                 javax.swing.GroupLayout pnlFilmsLayout = new javax.swing.GroupLayout(pnlFilms);
                 pnlFilms.setLayout(pnlFilmsLayout);
                 pnlFilmsLayout.setHorizontalGroup(
                         pnlFilmsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFilmsLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(scpFilms, javax.swing.GroupLayout.DEFAULT_SIZE, 872, Short.MAX_VALUE)
+                                .addComponent(scpFilms, javax.swing.GroupLayout.DEFAULT_SIZE, 871, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(pnlFilmsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(btnAddFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(btnAddFilm1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pnlFilmsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(btnAddFilm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnAddFilm1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel11))
                                 .addContainerGap())
                 );
                 pnlFilmsLayout.setVerticalGroup(
@@ -385,12 +389,13 @@ public class ClientForm extends javax.swing.JFrame {
                         .addGroup(pnlFilmsLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(pnlFilmsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(scpFilms, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
                                         .addGroup(pnlFilmsLayout.createSequentialGroup()
                                                 .addComponent(btnAddFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(btnAddFilm1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(scpFilms, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
 
@@ -407,6 +412,11 @@ public class ClientForm extends javax.swing.JFrame {
                 scpInventory.setViewportView(tblInventory);
 
                 btnInventoryRefresh.setText("Refresh");
+                btnInventoryRefresh.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnInventoryRefreshActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout pnlInventoryLayout = new javax.swing.GroupLayout(pnlInventory);
                 pnlInventory.setLayout(pnlInventoryLayout);
@@ -441,12 +451,26 @@ public class ClientForm extends javax.swing.JFrame {
 
                         }
                 ));
+                tblClients.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+                tblClients.addFocusListener(new java.awt.event.FocusAdapter() {
+                        public void focusGained(java.awt.event.FocusEvent evt) {
+                                tblClientsFocusGained(evt);
+                        }
+                        public void focusLost(java.awt.event.FocusEvent evt) {
+                                tblClientsFocusLost(evt);
+                        }
+                });
                 scpClients.setViewportView(tblClients);
 
                 btnAddClient.setText("Add Client");
 
                 btnUpdateClient.setText("Update Selected");
                 btnUpdateClient.setToolTipText("");
+                btnUpdateClient.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnUpdateClientActionPerformed(evt);
+                        }
+                });
 
                 btnDeleteClient.setText("Delete Selected");
 
@@ -506,10 +530,16 @@ public class ClientForm extends javax.swing.JFrame {
 				JOptionPane.ERROR_MESSAGE
 				);
 		}
+		//Enable sorting by column
 		tblStaff.setAutoCreateRowSorter(true);
 		tblFilms.setAutoCreateRowSorter(true);
 		tblInventory.setAutoCreateRowSorter(true);
 		tblClients.setAutoCreateRowSorter(true);
+		//Disable cell editing
+		tblStaff.setDefaultEditor(Object.class, null);
+		tblFilms.setDefaultEditor(Object.class, null);
+		tblInventory.setDefaultEditor(Object.class, null);
+		tblClients.setDefaultEditor(Object.class, null);
         }//GEN-LAST:event_formWindowOpened
 
         private void btnStaffSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaffSearchMouseClicked
@@ -573,6 +603,28 @@ public class ClientForm extends javax.swing.JFrame {
 		updateFilms();
         }//GEN-LAST:event_btnFilmRefresh
 
+        private void btnInventoryRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryRefreshActionPerformed
+		updateInventory();
+        }//GEN-LAST:event_btnInventoryRefreshActionPerformed
+
+        private void btnUpdateClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateClientActionPerformed
+		int selR = tblClients.getSelectedRow();
+		if(selR != -1)
+		{
+			int clientId = (int)tblClients.getValueAt(selR, 0);
+		}
+        }//GEN-LAST:event_btnUpdateClientActionPerformed
+
+        private void tblClientsFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblClientsFocusGained
+                // TODO add your handling code here:
+		System.out.println("FOCUS GAINED");
+        }//GEN-LAST:event_tblClientsFocusGained
+
+        private void tblClientsFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblClientsFocusLost
+                // TODO add your handling code here:
+		System.out.println("FOCUS LOST");
+        }//GEN-LAST:event_tblClientsFocusLost
+
 	boolean populateTable(JTable tbl, ResultSet res){return populateTable(tbl, res, 2000);}
 	boolean populateTable(JTable tbl, ResultSet res, int maxRows)
 	{
@@ -619,8 +671,12 @@ public class ClientForm extends javax.swing.JFrame {
 			if(conn == null) { return false; }
 			Statement s = conn.createStatement();
 			final String q = "SELECT first_name AS 'First Name', last_name AS 'Surname', address AS 'Address', address2 AS 'Address 2', " +
-					 "address.district AS 'District', city AS 'City', postal_code AS 'PO Box', phone AS `Tel`, d.storeLoc AS `Store`, IF(active=1,'Yes','No') AS 'Active' " +
-					 "FROM staff, address, city, (select store_id, district AS storeLoc from store, address WHERE store.address_id = address.address_id) d " +
+					 "address.district AS 'District', city AS 'City', postal_code AS 'PO Box', phone AS `Tel`, d.storeLoc AS `Store`, " +
+					 "IF(active=1,'Yes','No') AS 'Active' " +
+					 "FROM staff, address, city, " +
+					 "(select store_id, CONCAT(country, ', ', city) AS storeLoc from store, address, city, country " +
+					 "WHERE store.address_id = address.address_id AND address.city_id = city.city_id AND city.country_id = country.country_id) d " +
+
 					 "WHERE staff.address_id = address.address_id AND address.city_id = city.city_id AND staff.store_id = d.store_id";
 
 			try(ResultSet res = s.executeQuery(q))
@@ -692,7 +748,13 @@ public class ClientForm extends javax.swing.JFrame {
 			if(conn == null) { return false; }
 			Statement s = conn.createStatement();
 
-			try(ResultSet res = s.executeQuery("SELECT * FROM inventory"))
+			final String q = "SELECT storeLoc AS `Store`, name AS `Genre`, COUNT(f.film_id) AS `No. of Films` " +
+					 "FROM category c, film_category fc, film f, inventory i, " +
+					 "(select store_id, CONCAT(country, ', ', city) AS storeLoc from store, address, city, country " +
+					 "WHERE store.address_id = address.address_id AND address.city_id = city.city_id AND city.country_id = country.country_id) d " +
+					 "WHERE c.category_id = fc.category_id AND fc.film_id = f.film_id AND i.film_id = f.film_id AND i.store_id = d.store_id GROUP BY i.store_id, name";
+
+			try(ResultSet res = s.executeQuery(q))
 			{
 				populateTable(tblInventory, res);
 				res.close();
@@ -711,9 +773,20 @@ public class ClientForm extends javax.swing.JFrame {
 			if(conn == null) { return false; }
 			Statement s = conn.createStatement();
 
-			try(ResultSet res = s.executeQuery("SELECT * FROM customer"))
+			final String q = "SELECT customer_id, storeLoc AS `Store`, first_name AS `First Name`, last_name AS `Surname`, email AS `Email` " +
+					 "FROM customer, " +
+					 "(select store_id, CONCAT(country, ', ', city) AS storeLoc from store, address, city, country " +
+					 "WHERE store.address_id = address.address_id AND address.city_id = city.city_id AND city.country_id = country.country_id) d " +
+					 "WHERE customer.store_id = d.store_id";
+
+			try(ResultSet res = s.executeQuery(q))
 			{
-				populateTable(tblClients, res);
+				if(populateTable(tblClients, res))
+				{
+					//Hide customer_id column
+					tblClients.getColumnModel().getColumn(0).setMinWidth(0);
+					tblClients.getColumnModel().getColumn(0).setMaxWidth(0);
+				}
 				res.close();
 			}
 			s.close();
@@ -790,6 +863,7 @@ public class ClientForm extends javax.swing.JFrame {
         private javax.swing.JDialog dlgAddFilm;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel10;
+        private javax.swing.JLabel jLabel11;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
         private javax.swing.JLabel jLabel4;
