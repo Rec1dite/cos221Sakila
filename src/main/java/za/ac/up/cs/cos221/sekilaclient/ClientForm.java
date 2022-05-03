@@ -61,6 +61,28 @@ public class ClientForm extends javax.swing.JFrame {
                 cbxFilmSF_Commentaries = new javax.swing.JCheckBox();
                 cbxFilmSF_BehindScenes = new javax.swing.JCheckBox();
                 cbxFilmSF_DeletedScenes = new javax.swing.JCheckBox();
+                dlgEditClient = new javax.swing.JDialog();
+                jPanel1 = new javax.swing.JPanel();
+                txtClientFirstName = new javax.swing.JTextField();
+                jLabel12 = new javax.swing.JLabel();
+                jLabel13 = new javax.swing.JLabel();
+                txtClientSurname = new javax.swing.JTextField();
+                jLabel15 = new javax.swing.JLabel();
+                txtClientEmail = new javax.swing.JTextField();
+                jLabel14 = new javax.swing.JLabel();
+                cbxClientStore = new javax.swing.JComboBox<>();
+                cbxClientActive = new javax.swing.JCheckBox();
+                jLabel16 = new javax.swing.JLabel();
+                jLabel17 = new javax.swing.JLabel();
+                jPanel2 = new javax.swing.JPanel();
+                txtClientFirstName1 = new javax.swing.JTextField();
+                jLabel18 = new javax.swing.JLabel();
+                jLabel19 = new javax.swing.JLabel();
+                txtClientSurname1 = new javax.swing.JTextField();
+                jLabel20 = new javax.swing.JLabel();
+                txtClientEmail1 = new javax.swing.JTextField();
+                jLabel21 = new javax.swing.JLabel();
+                cbxClientStore1 = new javax.swing.JComboBox<>();
                 tbpMain = new javax.swing.JTabbedPane();
                 pnlStaff = new javax.swing.JPanel();
                 btnStaffSearch = new javax.swing.JButton();
@@ -286,6 +308,155 @@ public class ClientForm extends javax.swing.JFrame {
                                 .addContainerGap(98, Short.MAX_VALUE))
                 );
 
+                dlgEditClient.setTitle("Add Client");
+                dlgEditClient.setMinimumSize(new java.awt.Dimension(700, 500));
+                dlgEditClient.setPreferredSize(new java.awt.Dimension(700, 500));
+
+                jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+                jLabel12.setText("First Name:");
+
+                jLabel13.setText("Surname:");
+
+                jLabel15.setText("Email:");
+
+                jLabel14.setText("Store:");
+
+                cbxClientStore.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Canada, Lethbridge", "Australia, Woodridge" }));
+
+                cbxClientActive.setText("Active");
+
+                javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+                jPanel1.setLayout(jPanel1Layout);
+                jPanel1Layout.setHorizontalGroup(
+                        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(cbxClientStore, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtClientEmail, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtClientSurname, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtClientFirstName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cbxClientActive)
+                                .addContainerGap())
+                );
+                jPanel1Layout.setVerticalGroup(
+                        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtClientFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtClientSurname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtClientEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabel14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbxClientStore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                                .addComponent(cbxClientActive)
+                                .addContainerGap())
+                );
+
+                jLabel16.setText("Client Details");
+
+                jLabel17.setText("Client Address");
+
+                jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+                jLabel18.setText("Address 1:");
+
+                jLabel19.setText("Address 2:");
+
+                jLabel20.setText("Email:");
+
+                jLabel21.setText("Store:");
+
+                cbxClientStore1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Canada, Lethbridge", "Australia, Woodridge" }));
+
+                javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+                jPanel2.setLayout(jPanel2Layout);
+                jPanel2Layout.setHorizontalGroup(
+                        jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(cbxClientStore1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtClientEmail1, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtClientSurname1, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtClientFirstName1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                );
+                jPanel2Layout.setVerticalGroup(
+                        jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtClientFirstName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel19)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtClientSurname1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtClientEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabel21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbxClientStore1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(69, Short.MAX_VALUE))
+                );
+
+                javax.swing.GroupLayout dlgEditClientLayout = new javax.swing.GroupLayout(dlgEditClient.getContentPane());
+                dlgEditClient.getContentPane().setLayout(dlgEditClientLayout);
+                dlgEditClientLayout.setHorizontalGroup(
+                        dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(dlgEditClientLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel16))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel17))
+                                .addContainerGap(156, Short.MAX_VALUE))
+                );
+                dlgEditClientLayout.setVerticalGroup(
+                        dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(dlgEditClientLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(dlgEditClientLayout.createSequentialGroup()
+                                                .addComponent(jLabel17)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(dlgEditClientLayout.createSequentialGroup()
+                                                .addComponent(jLabel16)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(181, Short.MAX_VALUE))
+                );
+
                 setTitle("Sakila Editor");
                 setMinimumSize(new java.awt.Dimension(400, 300));
                 addWindowListener(new java.awt.event.WindowAdapter() {
@@ -456,9 +627,6 @@ public class ClientForm extends javax.swing.JFrame {
                         public void focusGained(java.awt.event.FocusEvent evt) {
                                 tblClientsFocusGained(evt);
                         }
-                        public void focusLost(java.awt.event.FocusEvent evt) {
-                                tblClientsFocusLost(evt);
-                        }
                 });
                 scpClients.setViewportView(tblClients);
 
@@ -466,6 +634,7 @@ public class ClientForm extends javax.swing.JFrame {
 
                 btnUpdateClient.setText("Update Selected");
                 btnUpdateClient.setToolTipText("");
+                btnUpdateClient.setEnabled(false);
                 btnUpdateClient.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnUpdateClientActionPerformed(evt);
@@ -473,6 +642,7 @@ public class ClientForm extends javax.swing.JFrame {
                 });
 
                 btnDeleteClient.setText("Delete Selected");
+                btnDeleteClient.setEnabled(false);
 
                 javax.swing.GroupLayout pnlClientsLayout = new javax.swing.GroupLayout(pnlClients);
                 pnlClients.setLayout(pnlClientsLayout);
@@ -543,7 +713,8 @@ public class ClientForm extends javax.swing.JFrame {
         }//GEN-LAST:event_formWindowOpened
 
         private void btnStaffSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaffSearchMouseClicked
-		updateStaff();
+		String search = txtStaffSearch.getText();
+		updateStaff(search);
         }//GEN-LAST:event_btnStaffSearchMouseClicked
 
         private void btnAddFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddFilmActionPerformed
@@ -616,14 +787,9 @@ public class ClientForm extends javax.swing.JFrame {
         }//GEN-LAST:event_btnUpdateClientActionPerformed
 
         private void tblClientsFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblClientsFocusGained
-                // TODO add your handling code here:
-		System.out.println("FOCUS GAINED");
+		btnUpdateClient.setEnabled(true);
+		btnDeleteClient.setEnabled(true);
         }//GEN-LAST:event_tblClientsFocusGained
-
-        private void tblClientsFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblClientsFocusLost
-                // TODO add your handling code here:
-		System.out.println("FOCUS LOST");
-        }//GEN-LAST:event_tblClientsFocusLost
 
 	boolean populateTable(JTable tbl, ResultSet res){return populateTable(tbl, res, 2000);}
 	boolean populateTable(JTable tbl, ResultSet res, int maxRows)
@@ -662,24 +828,27 @@ public class ClientForm extends javax.swing.JFrame {
 		return true;
 
 	}
-	boolean updateStaff() {
+	boolean updateStaff() {return updateStaff("");}
+	boolean updateStaff(String search) {
 		try
 		{
-			String search = txtStaffSearch.getText(); //TODO: Staff filter (4.3)
-
+			search = search.trim();
 			Connection conn = getDBConnection();
 			if(conn == null) { return false; }
-			Statement s = conn.createStatement();
-			final String q = "SELECT first_name AS 'First Name', last_name AS 'Surname', address AS 'Address', address2 AS 'Address 2', " +
+			String q = "SELECT first_name AS 'First Name', last_name AS 'Surname', address AS 'Address', address2 AS 'Address 2', " +
 					 "address.district AS 'District', city AS 'City', postal_code AS 'PO Box', phone AS `Tel`, d.storeLoc AS `Store`, " +
 					 "IF(active=1,'Yes','No') AS 'Active' " +
 					 "FROM staff, address, city, " +
 					 "(select store_id, CONCAT(country, ', ', city) AS storeLoc from store, address, city, country " +
 					 "WHERE store.address_id = address.address_id AND address.city_id = city.city_id AND city.country_id = country.country_id) d " +
 
-					 "WHERE staff.address_id = address.address_id AND address.city_id = city.city_id AND staff.store_id = d.store_id";
+					 "WHERE staff.address_id = address.address_id AND address.city_id = city.city_id AND staff.store_id = d.store_id " +
+					 "AND CONCAT(first_name, ' ', last_name, ' ', address) LIKE CONCAT('%', ?, '%')";
 
-			try(ResultSet res = s.executeQuery(q))
+			PreparedStatement s = conn.prepareStatement(q);
+			s.setString(1, search);
+
+			try(ResultSet res = s.executeQuery())
 			{
 				populateTable(tblStaff, res);
 				res.close();
@@ -854,6 +1023,9 @@ public class ClientForm extends javax.swing.JFrame {
         private javax.swing.JButton btnInventoryRefresh;
         private javax.swing.JButton btnStaffSearch;
         private javax.swing.JButton btnUpdateClient;
+        private javax.swing.JCheckBox cbxClientActive;
+        private javax.swing.JComboBox<String> cbxClientStore;
+        private javax.swing.JComboBox<String> cbxClientStore1;
         private javax.swing.JComboBox<String> cbxFilmLanguage;
         private javax.swing.JComboBox<String> cbxFilmRating;
         private javax.swing.JCheckBox cbxFilmSF_BehindScenes;
@@ -861,10 +1033,21 @@ public class ClientForm extends javax.swing.JFrame {
         private javax.swing.JCheckBox cbxFilmSF_DeletedScenes;
         private javax.swing.JCheckBox cbxFilmSF_Trailers;
         private javax.swing.JDialog dlgAddFilm;
+        private javax.swing.JDialog dlgEditClient;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel10;
         private javax.swing.JLabel jLabel11;
+        private javax.swing.JLabel jLabel12;
+        private javax.swing.JLabel jLabel13;
+        private javax.swing.JLabel jLabel14;
+        private javax.swing.JLabel jLabel15;
+        private javax.swing.JLabel jLabel16;
+        private javax.swing.JLabel jLabel17;
+        private javax.swing.JLabel jLabel18;
+        private javax.swing.JLabel jLabel19;
         private javax.swing.JLabel jLabel2;
+        private javax.swing.JLabel jLabel20;
+        private javax.swing.JLabel jLabel21;
         private javax.swing.JLabel jLabel3;
         private javax.swing.JLabel jLabel4;
         private javax.swing.JLabel jLabel5;
@@ -872,6 +1055,8 @@ public class ClientForm extends javax.swing.JFrame {
         private javax.swing.JLabel jLabel7;
         private javax.swing.JLabel jLabel8;
         private javax.swing.JLabel jLabel9;
+        private javax.swing.JPanel jPanel1;
+        private javax.swing.JPanel jPanel2;
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JPanel pnlClients;
         private javax.swing.JPanel pnlFilmSpecialFeatures;
@@ -892,6 +1077,12 @@ public class ClientForm extends javax.swing.JFrame {
         private javax.swing.JTable tblInventory;
         private javax.swing.JTable tblStaff;
         private javax.swing.JTabbedPane tbpMain;
+        private javax.swing.JTextField txtClientEmail;
+        private javax.swing.JTextField txtClientEmail1;
+        private javax.swing.JTextField txtClientFirstName;
+        private javax.swing.JTextField txtClientFirstName1;
+        private javax.swing.JTextField txtClientSurname;
+        private javax.swing.JTextField txtClientSurname1;
         private javax.swing.JTextArea txtFilmDescription;
         private javax.swing.JTextField txtFilmTitle;
         private javax.swing.JTextField txtStaffSearch;
