@@ -1,0 +1,48 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/Rec1dite/.m2/repository/org/mariadb/jdbc/mariadb-java-client/3.0.4/mariadb-java-client-3.0.4.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/Rec1dite/Documents/NetBeansProjects/SekilaClient/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Rec1dite/Documents/NetBeansProjects/SekilaClient/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'SekilaClient 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'SekilaClient 1.0-SNAPSHOT API'
+za.ac.up.cs.cos221.sekilaclient
+'C:/Users/Rec1dite/Documents/NetBeansProjects/SekilaClient/src/main/java/za/ac/up/cs/cos221/sekilaclient/ClientForm.java'
+C:\Users\Rec1dite\.m2\repository\org\mariadb\jdbc\mariadb-java-client\3.0.4\mariadb-java-client-3.0.4.jar = 1651505081504
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\src\main\java = 1651503748366
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\allclasses-index.html = 1651638851806
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\allpackages-index.html = 1651638851809
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\element-list = 1651638851710
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\help-doc.html = 1651638851827
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\index-all.html = 1651638851822
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\index.html = 1651638851824
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\jquery-ui.overrides.css = 1651638851856
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\member-search-index.js = 1651638851815
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\module-search-index.js = 1651638851810
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\overview-tree.html = 1651638851792
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\package-search-index.js = 1651638851812
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\script.js = 1651638851831
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\search.js = 1651638851833
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\serialized-form.html = 1651638851775
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\stylesheet.css = 1651638851829
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\tag-search-index.js = 1651638851816
+C:\Users\Rec1dite\Documents\NetBeansProjects\SekilaClient\target\apidocs\type-search-index.js = 1651638851814

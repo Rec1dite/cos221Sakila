@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"za.ac.up.cs.cos221.sekilaclient","c":"ClientForm","l":"ClientForm()","u":"%3Cinit%3E()"},{"p":"za.ac.up.cs.cos221.sekilaclient","c":"ClientForm","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
