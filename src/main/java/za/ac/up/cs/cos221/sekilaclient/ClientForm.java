@@ -94,6 +94,7 @@ public class ClientForm extends javax.swing.JFrame {
                 scpStaff = new javax.swing.JScrollPane();
                 tblStaff = new javax.swing.JTable();
                 txtStaffSearch = new javax.swing.JTextField();
+                jLabel24 = new javax.swing.JLabel();
                 pnlFilms = new javax.swing.JPanel();
                 btnAddFilm = new javax.swing.JButton();
                 scpFilms = new javax.swing.JScrollPane();
@@ -110,17 +111,12 @@ public class ClientForm extends javax.swing.JFrame {
                 btnAddClient = new javax.swing.JButton();
                 btnUpdateClient = new javax.swing.JButton();
                 btnDeleteClient = new javax.swing.JButton();
+                jLabel25 = new javax.swing.JLabel();
 
                 dlgAddFilm.setTitle("Add Film");
                 dlgAddFilm.setMinimumSize(new java.awt.Dimension(300, 600));
                 dlgAddFilm.setPreferredSize(new java.awt.Dimension(300, 600));
                 dlgAddFilm.setSize(new java.awt.Dimension(300, 600));
-
-                txtFilmTitle.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                txtFilmTitleActionPerformed(evt);
-                        }
-                });
 
                 jLabel1.setText("Title:");
 
@@ -506,8 +502,10 @@ public class ClientForm extends javax.swing.JFrame {
                 });
 
                 tbpMain.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+                tbpMain.setToolTipText("");
 
                 btnStaffSearch.setText("Search");
+                btnStaffSearch.setToolTipText("Search");
                 btnStaffSearch.addMouseListener(new java.awt.event.MouseAdapter() {
                         public void mouseClicked(java.awt.event.MouseEvent evt) {
                                 btnStaffSearchMouseClicked(evt);
@@ -524,7 +522,9 @@ public class ClientForm extends javax.swing.JFrame {
                 ));
                 scpStaff.setViewportView(tblStaff);
 
-                txtStaffSearch.setToolTipText("Search");
+                txtStaffSearch.setToolTipText("Enter your search phrase here");
+
+                jLabel24.setText("<html><b>Hint:</b><br />Enter a term into the searchbox<br />and hit <i>Search</i> to filter by<br />name, surname, or address.</html>");
 
                 javax.swing.GroupLayout pnlStaffLayout = new javax.swing.GroupLayout(pnlStaff);
                 pnlStaff.setLayout(pnlStaffLayout);
@@ -535,8 +535,10 @@ public class ClientForm extends javax.swing.JFrame {
                                 .addComponent(scpStaff, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(pnlStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtStaffSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(btnStaffSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(pnlStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtStaffSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(btnStaffSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel24))
                                 .addContainerGap())
                 );
                 pnlStaffLayout.setVerticalGroup(
@@ -548,7 +550,8 @@ public class ClientForm extends javax.swing.JFrame {
                                                 .addComponent(txtStaffSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(btnStaffSearch)
-                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(scpStaff, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
@@ -556,6 +559,7 @@ public class ClientForm extends javax.swing.JFrame {
                 tbpMain.addTab("Staff", pnlStaff);
 
                 btnAddFilm.setText("Add Film");
+                btnAddFilm.setToolTipText("Add a new film to the database");
                 btnAddFilm.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnAddFilmActionPerformed(evt);
@@ -572,7 +576,8 @@ public class ClientForm extends javax.swing.JFrame {
                 ));
                 scpFilms.setViewportView(tblFilms);
 
-                btnAddFilm1.setText("Refresh");
+                btnAddFilm1.setText("Reset");
+                btnAddFilm1.setToolTipText("Resets the table view");
                 btnAddFilm1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnFilmRefresh(evt);
@@ -622,7 +627,8 @@ public class ClientForm extends javax.swing.JFrame {
                 ));
                 scpInventory.setViewportView(tblInventory);
 
-                btnInventoryRefresh.setText("Refresh");
+                btnInventoryRefresh.setText("Reset");
+                btnInventoryRefresh.setToolTipText("Resets the table view");
                 btnInventoryRefresh.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnInventoryRefreshActionPerformed(evt);
@@ -671,6 +677,7 @@ public class ClientForm extends javax.swing.JFrame {
                 scpClients.setViewportView(tblClients);
 
                 btnAddClient.setText("Add Client");
+                btnAddClient.setToolTipText("Add a new customer to the database");
                 btnAddClient.addMouseListener(new java.awt.event.MouseAdapter() {
                         public void mouseClicked(java.awt.event.MouseEvent evt) {
                                 btnAddClientMouseClicked(evt);
@@ -678,7 +685,7 @@ public class ClientForm extends javax.swing.JFrame {
                 });
 
                 btnUpdateClient.setText("Update Selected");
-                btnUpdateClient.setToolTipText("");
+                btnUpdateClient.setToolTipText("Update an existing customer");
                 btnUpdateClient.setEnabled(false);
                 btnUpdateClient.addMouseListener(new java.awt.event.MouseAdapter() {
                         public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -687,12 +694,15 @@ public class ClientForm extends javax.swing.JFrame {
                 });
 
                 btnDeleteClient.setText("Delete Selected");
+                btnDeleteClient.setToolTipText("Delete all records associated with the selected client");
                 btnDeleteClient.setEnabled(false);
                 btnDeleteClient.addMouseListener(new java.awt.event.MouseAdapter() {
                         public void mouseClicked(java.awt.event.MouseEvent evt) {
                                 btnDeleteClientMouseClicked(evt);
                         }
                 });
+
+                jLabel25.setText("<html><b>Hint:</b><br />Select a row in<br />the table to edit<br />its properties or<br />to delete the<br />corresponding client.</html>");
 
                 javax.swing.GroupLayout pnlClientsLayout = new javax.swing.GroupLayout(pnlClients);
                 pnlClients.setLayout(pnlClientsLayout);
@@ -705,7 +715,8 @@ public class ClientForm extends javax.swing.JFrame {
                                 .addGroup(pnlClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(btnAddClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(btnUpdateClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnDeleteClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(btnDeleteClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel25))
                                 .addContainerGap())
                 );
                 pnlClientsLayout.setVerticalGroup(
@@ -719,7 +730,8 @@ public class ClientForm extends javax.swing.JFrame {
                                                 .addComponent(btnUpdateClient, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(48, 48, 48)
                                                 .addComponent(btnDeleteClient, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(scpClients, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
@@ -778,7 +790,6 @@ public class ClientForm extends javax.swing.JFrame {
         }//GEN-LAST:event_btnStaffSearchMouseClicked
 
         private void btnAddFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddFilmActionPerformed
-		//TODO: Use mouse click instead
 		dlgAddFilm.setVisible(true);
         }//GEN-LAST:event_btnAddFilmActionPerformed
 
@@ -826,10 +837,6 @@ public class ClientForm extends javax.swing.JFrame {
 		//Close dialog
 		dlgAddFilm.setVisible(false);
         }//GEN-LAST:event_btnFilmSubmitActionPerformed
-
-        private void txtFilmTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFilmTitleActionPerformed
-                // TODO add your handling code here:
-        }//GEN-LAST:event_txtFilmTitleActionPerformed
 
         private void btnFilmRefresh(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFilmRefresh
 		updateFilms();
@@ -999,7 +1006,8 @@ public class ClientForm extends javax.swing.JFrame {
 			s.setInt(6, (active?1:0));
 
 			int res = s.executeUpdate();
-			System.out.println(res + " rows inserted.");
+			String msg = "User " + fName + " " + surname + " successfully added.";
+			JOptionPane.showMessageDialog(null, msg, "Success", JOptionPane.DEFAULT_OPTION);
 			s.close();
 			conn.close();
 
@@ -1125,7 +1133,8 @@ public class ClientForm extends javax.swing.JFrame {
 			s.setInt(7, id);
 
 			int res = s.executeUpdate();
-			System.out.println(res + " rows inserted.");
+			String msg = "User " + fName + " " + surname + " successfully updated.";
+			JOptionPane.showMessageDialog(null, msg, "Success", JOptionPane.DEFAULT_OPTION);
 			s.close();
 			conn.close();
 
@@ -1245,7 +1254,8 @@ public class ClientForm extends javax.swing.JFrame {
 			s.setString(10, specFeatures);
 
 			int res = s.executeUpdate();
-			System.out.println(res + " rows inserted.");
+			String msg = "Film " + title + " successfully added.";
+			JOptionPane.showMessageDialog(null, msg, "Success", JOptionPane.DEFAULT_OPTION);
 			s.close();
 			conn.close();
 
@@ -1402,6 +1412,8 @@ public class ClientForm extends javax.swing.JFrame {
         private javax.swing.JLabel jLabel21;
         private javax.swing.JLabel jLabel22;
         private javax.swing.JLabel jLabel23;
+        private javax.swing.JLabel jLabel24;
+        private javax.swing.JLabel jLabel25;
         private javax.swing.JLabel jLabel3;
         private javax.swing.JLabel jLabel4;
         private javax.swing.JLabel jLabel5;

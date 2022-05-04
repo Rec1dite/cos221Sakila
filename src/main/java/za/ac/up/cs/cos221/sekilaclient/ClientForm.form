@@ -148,9 +148,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtFilmTitle">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFilmTitleActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
@@ -725,6 +722,7 @@
             <EtchetBorder/>
           </Border>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
@@ -746,8 +744,11 @@
                       <Component id="scpStaff" pref="775" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtStaffSearch" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Component id="btnStaffSearch" alignment="1" min="-2" pref="84" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtStaffSearch" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnStaffSearch" alignment="1" min="-2" pref="84" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel24" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -762,7 +763,8 @@
                               <Component id="txtStaffSearch" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnStaffSearch" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="scpStaff" pref="506" max="32767" attributes="0"/>
                       </Group>
@@ -775,6 +777,7 @@
             <Component class="javax.swing.JButton" name="btnStaffSearch">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search"/>
+                <Property name="toolTipText" type="java.lang.String" value="Search"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnStaffSearchMouseClicked"/>
@@ -804,7 +807,12 @@
             </Container>
             <Component class="javax.swing.JTextField" name="txtStaffSearch">
               <Properties>
-                <Property name="toolTipText" type="java.lang.String" value="Search"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter your search phrase here"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel24">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Hint:&lt;/b&gt;&lt;br /&gt;Enter a term into the searchbox&lt;br /&gt;and hit &lt;i&gt;Search&lt;/i&gt; to filter by&lt;br /&gt;name, surname, or address.&lt;/html&gt;"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -857,6 +865,7 @@
             <Component class="javax.swing.JButton" name="btnAddFilm">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Film"/>
+                <Property name="toolTipText" type="java.lang.String" value="Add a new film to the database"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddFilmActionPerformed"/>
@@ -886,7 +895,8 @@
             </Container>
             <Component class="javax.swing.JButton" name="btnAddFilm1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Refresh"/>
+                <Property name="text" type="java.lang.String" value="Reset"/>
+                <Property name="toolTipText" type="java.lang.String" value="Resets the table view"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFilmRefresh"/>
@@ -961,7 +971,8 @@
             </Container>
             <Component class="javax.swing.JButton" name="btnInventoryRefresh">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Refresh"/>
+                <Property name="text" type="java.lang.String" value="Reset"/>
+                <Property name="toolTipText" type="java.lang.String" value="Resets the table view"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInventoryRefreshActionPerformed"/>
@@ -989,6 +1000,7 @@
                           <Component id="btnAddClient" max="32767" attributes="0"/>
                           <Component id="btnUpdateClient" max="32767" attributes="0"/>
                           <Component id="btnDeleteClient" max="32767" attributes="0"/>
+                          <Component id="jLabel25" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1005,7 +1017,8 @@
                               <Component id="btnUpdateClient" min="-2" pref="40" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="btnDeleteClient" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="scpClients" pref="506" max="32767" attributes="0"/>
                       </Group>
@@ -1044,6 +1057,7 @@
             <Component class="javax.swing.JButton" name="btnAddClient">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Client"/>
+                <Property name="toolTipText" type="java.lang.String" value="Add a new customer to the database"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAddClientMouseClicked"/>
@@ -1052,7 +1066,7 @@
             <Component class="javax.swing.JButton" name="btnUpdateClient">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Selected"/>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="toolTipText" type="java.lang.String" value="Update an existing customer"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -1062,11 +1076,17 @@
             <Component class="javax.swing.JButton" name="btnDeleteClient">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Selected"/>
+                <Property name="toolTipText" type="java.lang.String" value="Delete all records associated with the selected client"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnDeleteClientMouseClicked"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel25">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Hint:&lt;/b&gt;&lt;br /&gt;Select a row in&lt;br /&gt;the table to edit&lt;br /&gt;its properties or&lt;br /&gt;to delete the&lt;br /&gt;corresponding client.&lt;/html&gt;"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
