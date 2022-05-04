@@ -314,9 +314,9 @@ public class ClientForm extends javax.swing.JFrame {
                 );
 
                 dlgEditClient.setTitle("Add Client");
-                dlgEditClient.setMinimumSize(new java.awt.Dimension(570, 410));
-                dlgEditClient.setPreferredSize(new java.awt.Dimension(570, 410));
-                dlgEditClient.setResizable(false);
+                dlgEditClient.setMinimumSize(new java.awt.Dimension(600, 500));
+                dlgEditClient.setPreferredSize(new java.awt.Dimension(600, 500));
+                dlgEditClient.setSize(new java.awt.Dimension(600, 500));
 
                 pnlClientDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -411,18 +411,20 @@ public class ClientForm extends javax.swing.JFrame {
                         .addGroup(pnlClientAddressLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(pnlClientAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(pnlClientAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(cbxClientCity, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(txtClientDistrict, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(txtClientAddress2, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtClientAddress1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtClientPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(txtClientAddress1)
+                                        .addGroup(pnlClientAddressLayout.createSequentialGroup()
+                                                .addGroup(pnlClientAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(txtClientPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(txtClientAddress2)
+                                        .addComponent(txtClientDistrict)
+                                        .addComponent(cbxClientCity, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
                 );
                 pnlClientAddressLayout.setVerticalGroup(
                         pnlClientAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -443,11 +445,11 @@ public class ClientForm extends javax.swing.JFrame {
                                 .addComponent(jLabel21)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cbxClientCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel22)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtClientPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(13, Short.MAX_VALUE))
+                                .addContainerGap(37, Short.MAX_VALUE))
                 );
 
                 btnClientSubmit.setText("Submit");
@@ -463,17 +465,20 @@ public class ClientForm extends javax.swing.JFrame {
                         dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(dlgEditClientLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(btnClientSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(pnlClientDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel16))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(dlgEditClientLayout.createSequentialGroup()
-                                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(pnlClientDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel16))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(pnlClientAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel17))))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(jLabel17)
+                                                .addGap(190, 220, Short.MAX_VALUE))
+                                        .addComponent(pnlClientAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(6, 6, 6))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dlgEditClientLayout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnClientSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
                 );
                 dlgEditClientLayout.setVerticalGroup(
                         dlgEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,7 +494,7 @@ public class ClientForm extends javax.swing.JFrame {
                                         .addComponent(pnlClientDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnClientSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(8, Short.MAX_VALUE))
                 );
 
                 setTitle("Sakila Editor");
@@ -666,23 +671,28 @@ public class ClientForm extends javax.swing.JFrame {
                 scpClients.setViewportView(tblClients);
 
                 btnAddClient.setText("Add Client");
-                btnAddClient.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                btnAddClientActionPerformed(evt);
+                btnAddClient.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                btnAddClientMouseClicked(evt);
                         }
                 });
 
                 btnUpdateClient.setText("Update Selected");
                 btnUpdateClient.setToolTipText("");
                 btnUpdateClient.setEnabled(false);
-                btnUpdateClient.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                btnUpdateClientActionPerformed(evt);
+                btnUpdateClient.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                btnUpdateClientMouseClicked(evt);
                         }
                 });
 
                 btnDeleteClient.setText("Delete Selected");
                 btnDeleteClient.setEnabled(false);
+                btnDeleteClient.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                btnDeleteClientMouseClicked(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout pnlClientsLayout = new javax.swing.GroupLayout(pnlClients);
                 pnlClients.setLayout(pnlClientsLayout);
@@ -731,6 +741,14 @@ public class ClientForm extends javax.swing.JFrame {
         }// </editor-fold>//GEN-END:initComponents
 
         private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+		//Set database connection details
+		if(System.getenv("SAKILA_DB_PROTO") != null){dbProto = System.getenv("SAKILA_DB_PROTO");}
+		if(System.getenv("SAKILA_DB_HOST") != null){dbHost = System.getenv("SAKILA_DB_HOST");}
+		if(System.getenv("SAKILA_DB_PORT") != null){dbPort = System.getenv("SAKILA_DB_PORT");}
+		if(System.getenv("SAKILA_DB_NAME") != null){dbName = System.getenv("SAKILA_DB_NAME");}
+		if(System.getenv("SAKILA_DB_USERNAME") != null){dbUser = System.getenv("SAKILA_DB_USERNAME");}
+		if(System.getenv("SAKILA_DB_PASSWORD") != null){dbPass = System.getenv("SAKILA_DB_PASSWORD");}
+		//Initialize tables
 		String connErrs = (updateStaff()?"":"\nStaff") + (updateFilms()?"":"\nFilms") + (updateInventory()?"":"\nInventory") + (updateClients()?"":"\nClients");
 		if(connErrs.length() != 0)
 		{
@@ -750,6 +768,8 @@ public class ClientForm extends javax.swing.JFrame {
 		tblFilms.setDefaultEditor(Object.class, null);
 		tblInventory.setDefaultEditor(Object.class, null);
 		tblClients.setDefaultEditor(Object.class, null);
+
+		updateCitiesList();
         }//GEN-LAST:event_formWindowOpened
 
         private void btnStaffSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaffSearchMouseClicked
@@ -758,6 +778,7 @@ public class ClientForm extends javax.swing.JFrame {
         }//GEN-LAST:event_btnStaffSearchMouseClicked
 
         private void btnAddFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddFilmActionPerformed
+		//TODO: Use mouse click instead
 		dlgAddFilm.setVisible(true);
         }//GEN-LAST:event_btnAddFilmActionPerformed
 
@@ -818,38 +839,85 @@ public class ClientForm extends javax.swing.JFrame {
 		updateInventory();
         }//GEN-LAST:event_btnInventoryRefreshActionPerformed
 
-        private void btnUpdateClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateClientActionPerformed
-		int selR = tblClients.getSelectedRow();
-		if(selR != -1)
-		{
-			clientEditingId = (int)tblClients.getValueAt(selR, 0);
-			editClient(clientEditingId);
-		}
-        }//GEN-LAST:event_btnUpdateClientActionPerformed
-
         private void tblClientsFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblClientsFocusGained
 		btnUpdateClient.setEnabled(true);
 		btnDeleteClient.setEnabled(true);
         }//GEN-LAST:event_tblClientsFocusGained
-	int clientEditingId = -1;
-        private void btnAddClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddClientActionPerformed
-		dlgEditClient.setVisible(true);
-		dlgEditClient.setTitle("Add Client");
-		clientEditingId = -1;
-        }//GEN-LAST:event_btnAddClientActionPerformed
 
         private void btnClientSubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientSubmitMouseClicked
-		if(clientEditingId == -1)
+		String fName = txtClientFirstName.getText();
+		String surname = txtClientSurname.getText();
+		String email = txtClientEmail.getText();
+		String phone = txtClientPhoneNumber.getText();
+		int storeId = cbxClientStore.getSelectedIndex() + 1;
+		boolean active = cbxClientActive.isSelected();
+		String address = txtClientAddress1.getText();
+		String address2 = txtClientAddress2.getText();
+		String district = txtClientDistrict.getText();
+		int cityId = cbxClientCity.getSelectedIndex() + 1;
+		String postalCode = txtClientPostalCode.getText();
+		if(clientEditingId < 0)
 		{
 			//Add new client
+			addClient(fName, surname, email, phone, storeId, active, address, address2, district, cityId, postalCode);
 		}
 		else
 		{
 			//Edit existing client
+			updateClient(clientEditingId, fName, surname, email, phone, storeId, active, address, address2, district, cityId, postalCode);
 		}
 		clearEditClientDialog();
 		dlgEditClient.setVisible(false);
+		updateClients();
         }//GEN-LAST:event_btnClientSubmitMouseClicked
+
+	int clientEditingId = -1;
+        private void btnAddClientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddClientMouseClicked
+		dlgEditClient.setVisible(true);
+		clearEditClientDialog();
+		dlgEditClient.setTitle("Add Client");
+		clientEditingId = -1;
+        }//GEN-LAST:event_btnAddClientMouseClicked
+
+        private void btnUpdateClientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateClientMouseClicked
+		int selR = tblClients.getSelectedRow();
+		if(selR != -1)
+		{
+			clientEditingId = (int)tblClients.getValueAt(selR, 0);
+			editClientDialogSetup(clientEditingId);
+			dlgEditClient.setVisible(true);
+			dlgEditClient.setTitle("Update Client");
+		}
+		else
+		{
+			//No row selected, disable buttons
+			btnUpdateClient.setEnabled(false);
+			btnDeleteClient.setEnabled(false);
+		}
+        }//GEN-LAST:event_btnUpdateClientMouseClicked
+
+        private void btnDeleteClientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteClientMouseClicked
+		int selR = tblClients.getSelectedRow();
+		if(selR != -1)
+		{
+			clientEditingId = (int)tblClients.getValueAt(selR, 0);
+			String name = (String)tblClients.getValueAt(selR, 2) + " " + (String)tblClients.getValueAt(selR, 3);
+
+			int dlgConfirmDelete = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete client " + name + "?", "Delete Confirmation", JOptionPane.YES_NO_OPTION);
+			if(dlgConfirmDelete == JOptionPane.YES_OPTION)
+			{
+				deleteClient(clientEditingId);
+				btnUpdateClient.setEnabled(false);
+				btnDeleteClient.setEnabled(false);
+				updateClients();
+			}
+		}
+		else
+		{
+			btnUpdateClient.setEnabled(false);
+			btnDeleteClient.setEnabled(false);
+		}
+        }//GEN-LAST:event_btnDeleteClientMouseClicked
 	void clearEditClientDialog()
 	{
 		txtClientFirstName.setText("");
@@ -865,7 +933,7 @@ public class ClientForm extends javax.swing.JFrame {
 		cbxClientCity.setSelectedIndex(0);
 		txtClientPostalCode.setText("");
 	}
-	boolean editClient(int clientId)
+	boolean editClientDialogSetup(int clientId)
 	{
 		try
 		{
@@ -879,23 +947,188 @@ public class ClientForm extends javax.swing.JFrame {
 
 			try(ResultSet res = s.executeQuery())
 			{
+				res.next();
 				txtClientFirstName.setText((String)res.getObject(1));
 				txtClientSurname.setText  ((String)res.getObject(2));
 				txtClientEmail.setText    ((String)res.getObject(3));
 				txtClientPhoneNumber.setText((String)res.getObject(4));
-				cbxClientStore.setSelectedIndex((int)res.getObject(5));
-				cbxClientActive.setSelected((boolean)res.getObject(6));
+				cbxClientStore.setSelectedIndex(((Short)res.getObject(5)).intValue()-1);
+				cbxClientActive.setSelected(((Byte)res.getObject(6))==0?false:true);
 
 				txtClientAddress1.setText((String)res.getObject(7));
 				txtClientAddress2.setText((String)res.getObject(8));
 				txtClientDistrict.setText((String)res.getObject(9));
-				cbxClientCity.setSelectedIndex((int)res.getObject(10));
+				cbxClientCity.setSelectedIndex((int)res.getObject(10)-1);
 				txtClientPostalCode.setText((String)res.getObject(11));
 
 				res.close();
-			} catch(Exception e) {System.out.println(e.toString());return false;}
+			} catch(Exception e) {System.out.println(e.getLocalizedMessage());return false;}
 			s.close();
 			conn.close();
+			return true;
+		}
+		catch(SQLException e) {System.out.println(e.toString());}
+		return false;
+	}
+	boolean addClient(String fName, String surname, String email, String phone, int storeId, boolean active, String address, String address2, String district, int cityId, String pc) {
+		try
+		{
+			Connection conn = getDBConnection();
+			if(conn == null) { return false; }
+
+			int addrId = addAddress(address, address2, district, cityId, pc, phone);
+
+			if(addrId == -1)
+			{
+				JOptionPane.showMessageDialog(null,
+					"Address data was not formatted correctly. Please try again.",
+					"Data Insertion Error",
+					JOptionPane.ERROR_MESSAGE
+					);
+			}
+
+			//Insert new client
+			PreparedStatement s = conn.prepareStatement(
+				"INSERT INTO customer (`store_id`, `first_name`, `last_name`, `email`, `address_id`, `active`) " +
+				"VALUES (?, ?, ?, ?, ?, ?)");
+			s.setInt(1, storeId);
+			s.setString(2, fName);
+			s.setString(3, surname);
+			s.setString(4, email);
+			s.setInt(5, addrId);
+			s.setInt(6, (active?1:0));
+
+			int res = s.executeUpdate();
+			System.out.println(res + " rows inserted.");
+			s.close();
+			conn.close();
+
+			return true;
+		}
+		catch(SQLException e) {System.out.println(e.toString());}
+		return false;
+	}
+	boolean updateCitiesList() {
+		try
+		{
+			Connection conn = getDBConnection();
+			if(conn == null) { return false; }
+			Statement s = conn.createStatement();
+
+			try(ResultSet res = s.executeQuery("SELECT CONCAT(country, ', ', city) AS `cityName` FROM city, country WHERE city.country_id = country.country_id ORDER BY city_id"))
+			{
+				Vector<String> cities = new Vector<String>();
+				while(res.next())
+				{
+					cities.add((String)res.getObject(1));
+				}
+				DefaultComboBoxModel<String> m = new DefaultComboBoxModel<>(cities);
+				cbxClientCity.setModel(m);
+				res.close();
+			}
+			s.close();
+			conn.close();
+			return true;
+		}
+		catch(SQLException e) {System.out.println(e.toString());}
+		return false;
+	}
+	//Adds a new address and returns it's address_id
+	int addAddress(String address, String address2, String district, int cityId, String pc, String phone) {
+		try
+		{
+			Connection conn = getDBConnection();
+			if(conn == null) { return -1; }
+
+			//Add new address
+			PreparedStatement a = conn.prepareStatement("INSERT INTO address (address, address2, district, city_id, postal_code, phone) " +
+								    "VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+			a.setString(1, address);
+			a.setString(2, address2);
+			a.setString(3, district);
+			a.setInt(4, cityId);
+			a.setString(5, pc);
+			a.setString(6, phone);
+			
+			int resA = a.executeUpdate();
+
+			//Get inserted address_id
+			ResultSet gk = a.getGeneratedKeys();
+			int addrId = -1;
+			if(gk.next())
+			{
+				addrId = gk.getInt(1);
+			}
+			a.close();
+			return addrId;
+		}
+		catch(SQLException e) {System.out.println(e.toString());}
+		return -1;
+	}
+	boolean deleteClient(int id) {
+		try
+		{
+			Connection conn = getDBConnection();
+			if(conn == null) { return false; }
+
+			String[] qs = new String[]
+			{
+				//Welcome to the danger zone
+				"DELETE FROM payment WHERE customer_id = ?",
+				"DELETE FROM rental WHERE customer_id = ?",
+				"DELETE FROM customer WHERE customer_id = ?",
+				"DELETE a FROM address a JOIN customer c ON c.address_id = a.address_id AND customer_id = ?"
+			};
+			for(int i = 0; i < qs.length; i++)
+			{
+				PreparedStatement s = conn.prepareStatement(qs[i]);
+				s.setInt(1, id);
+				s.executeUpdate();
+				s.close();
+			}
+
+			conn.close();
+			return true;
+		}
+		catch(SQLException e) {System.out.println(e.toString());}
+		return false;
+	}
+	boolean updateClient(int id, String fName, String surname, String email, String phone, int storeId, boolean active, String address,
+	String address2, String district, int cityId, String pc) {
+		try
+		{
+			Connection conn = getDBConnection();
+			if(conn == null) { return false; }
+
+			int addrId = addAddress(address, address2, district, cityId, pc, phone);
+
+			if(addrId == -1)
+			{
+				JOptionPane.showMessageDialog(null,
+					"Address data was not formatted correctly. Please try again.",
+					"Data Update Error",
+					JOptionPane.ERROR_MESSAGE
+					);
+			}
+
+			//Update client
+			PreparedStatement s = conn.prepareStatement(
+				"UPDATE customer SET `store_id` = ?, `first_name` = ?, `last_name` = ?, `email` = ?, `address_id` = ?, `active` = ? " +
+				"WHERE customer_id = ?");
+
+			s.setInt(1, storeId);
+			s.setString(2, fName);
+			s.setString(3, surname);
+			s.setString(4, email);
+			s.setInt(5, addrId);
+			s.setInt(6, (active?1:0));
+			s.setInt(7, id);
+
+			int res = s.executeUpdate();
+			System.out.println(res + " rows inserted.");
+			s.close();
+			conn.close();
+
 			return true;
 		}
 		catch(SQLException e) {System.out.println(e.toString());}
@@ -1053,7 +1286,7 @@ public class ClientForm extends javax.swing.JFrame {
 			if(conn == null) { return false; }
 			Statement s = conn.createStatement();
 
-			final String q = "SELECT customer_id, storeLoc AS `Store`, first_name AS `First Name`, last_name AS `Surname`, email AS `Email` " +
+			final String q = "SELECT customer_id, storeLoc AS `Store`, first_name AS `First Name`, last_name AS `Surname`, email AS `Email`" +
 					 "FROM customer, " +
 					 "(select store_id, CONCAT(country, ', ', city) AS storeLoc from store, address, city, country " +
 					 "WHERE store.address_id = address.address_id AND address.city_id = city.city_id AND city.country_id = country.country_id) d " +
@@ -1076,13 +1309,20 @@ public class ClientForm extends javax.swing.JFrame {
 		catch(SQLException e) {System.out.println(e.toString());}
 		return false;
 	}
+	static String dbProto = "jdbc:mariadb";
+	static String dbHost = "localhost";
+	static String dbPort = "3306";
+	static String dbName = "u21630276_sakila";
+	static String dbUser = "root";
+	static String dbPass = "passw0rd";
 	Connection getDBConnection()
 	{
-		String url = "jdbc:mariadb://localhost:3306/u21630276_sakila";
+//		String url = "jdbc:mariadb://localhost:3306/u21630276_sakila";
+		String url = dbProto + "://" + dbHost + ":" + dbPort + "/" + dbName;
 		Connection conn = null;
 		try 
 		{
-			conn = DriverManager.getConnection(url, "root", "passw0rd");
+			conn = DriverManager.getConnection(url, dbUser, dbPass);
 		}
 		catch (SQLException e) { System.out.println(e.toString()); }
 		return conn;
